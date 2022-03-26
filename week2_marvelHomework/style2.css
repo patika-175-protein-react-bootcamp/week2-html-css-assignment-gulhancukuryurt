@@ -1,0 +1,132 @@
+* {
+    background-image: url(Rectangle\ 1.png);
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+  }
+  
+  .header {
+    position: relative;
+    margin-bottom: 15rem;
+  }
+  
+  .main {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .marvelText {
+    position: absolute;
+    width: 20%;
+    max-height: 25%;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    
+  }
+  
+  .marvelCards {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .card {
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    margin: 48px 16px;
+    padding: 0 20px;
+  }
+  
+  .card > img {
+    position: relative;
+    border-top: 3px solid white;
+    width: 100%;
+    max-width: 500px;
+    top: -48px;
+    left: 0;
+    padding-top: 10px;
+    cursor: pointer;
+    
+    
+  }
+
+  .card > img:hover {
+     transform: scale(1.1); 
+    
+  }
+  
+  .card > p {
+    position: relative;
+    top: -25px;
+    border-bottom: 1px solid wheat;
+    padding-bottom: 5px;
+
+  }
+  
+  .pages {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 200px;
+  }
+  
+  .pages > span {
+    padding: 0.5vw 1vw;
+    color: #7e7e7e;
+    font-size: 1.25rem;
+    font-weight: 500;
+    
+  }
+  
+
+  .number-active {
+    border: 1px solid #7e7e7e;
+    border-radius: 20px;
+  }
+  
+  /* responsive */
+  @media only screen and (max-width: 1200px) {
+    .header {
+      margin-bottom: 160px;
+    }
+
+    .pages {
+      padding: 0 35px;
+      margin-bottom: 80px;
+    }
+
+    .marvelCards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .marvelText {
+      height: 100px;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .header {
+      margin-bottom: 80px;
+    }
+    
+    .marvelCards {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .marvelText {
+      height: 80px;
+    }
+   
+  }
